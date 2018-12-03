@@ -24,7 +24,7 @@ class Week:
         	"sat": Day("sat"),
 
         }
-    def get(self):
+    def days(self):
         """ getter for week dict
         """
         return self._days

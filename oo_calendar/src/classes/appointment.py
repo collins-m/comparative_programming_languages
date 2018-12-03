@@ -4,9 +4,24 @@ class Appointment:
         """ initialized with a name, the time it starts, and the time it
             finishes
         """
-        self.id = name
-        self.start = self.format_time(start)
-        self.end = self.format_time(end)
+        self._id = name
+        self._start = self._format_time(start)
+        self._end = self._format_time(end)
+
+    def id(self):
+        """ returns id
+        """
+        return self._id
+
+    def start(self):
+        """ returns start
+        """
+        return self._start
+
+    def end(self):
+        """ returns end
+        """
+        return self._end
 
     def min_conv(self, time):
         """ converts time <hh:mm> to minute integer
@@ -15,7 +30,7 @@ class Appointment:
         minutes = (int(hh) * 60) + int(mm)
         return minutes
 
-    def format_time(self, time):
+    def _format_time(self, time):
         """ foramts the time to a valid <hh:mm>
         """
         mins = self.min_conv(time)
@@ -31,4 +46,4 @@ class Appointment:
         """ printed out all the data it is initialized with
         """
         return "{} from {} until {}.".format(
-        self.id.capitalize(), self.start, self.end)
+        self._id.capitalize(), self._start, self._end)

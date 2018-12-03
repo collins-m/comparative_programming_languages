@@ -47,14 +47,14 @@ class Main:
                 if command[1] == "week":
                     print(str(self._week))
                 else:
-                    print(str(self._week.get()[command[1]]))
+                    print(str(self._week.days()[command[1]]))
 
             elif command[0] == "add":
                 self._week.add(command[1:])
 
             elif command[0] == "remove":
                 self._week.remove(command[1:])
-                
+
 if __name__ == "__main__":
     main = Main()
     main.main()
