@@ -30,13 +30,13 @@ ___
 
 ​	The OO approach to this solution was also written in python. This was mainly due to the ease of comparing paradigms when everything else _(the syntax etc.)_ is largely the same. While features such as polymorphism were not used - due to there being no need - the principals are present and I will explain this implementation with regards to the fundamentals of OO design.
 
-​	
+​
 
 ##### _The Main class:_
 
 ​	The main class is initiated with one parameter: __self.week__, which is a __Week__ object. I chose to make a week object instead of letting the main class act as the week because I valued an additional layer of abstraction. This was one of my core aims with this implementation. Design-wise, this let all methods that directly impact the Week object itself be self contained and any other method could be left inside the Main class.
 
-​	The class itself contained two methods: ___help()__ and __main()__. The help function printed a list of commands the user could call for the program, and the main method was where our program ran.
+​	The class itself contained two methods: __help()__ and __main()__. The help function printed a list of commands the user could call for the program, and the main method was where our program ran.
 
 ##### _The Week class:_
 
@@ -56,11 +56,10 @@ ___
 
 ### To compare
 
-​	If you were to look at both implementations at the output level, they are essentially identical. This is also similar on the function/method level. The imperative however, holds everything as standard python data types i.e. strings and tuples. Whereas the OO creates new objects for things such as appointments. 
+​	If you were to look at both implementations at the output level, they are essentially identical. This is also similar on the function/method level. The imperative however, holds everything as standard python data types i.e. strings and tuples. Whereas the OO creates new objects for things such as appointments.
 
 ​	While both have abstraction to some degree, the OO has many more layers, and this improves readability of the code, as well as keeping things encapsulated, and easy to maintain should that be required. They both make use of not repeating code, but again, the OO implementation is superior, but this is due to design. It’s drawback being that it is more memory intensive than the imperative.
 
 ​	Furthering this, the imperative is self contained in one file, while the OO is spread across multiples files and directories. They have both been given a Batch script to allow them to be ran with “run” executed in the parent directory.
 
 ___
-
